@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotillón Alegre - tp3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="bg-danger text-white">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">Cotillón Alegre</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto gap-3">
+                        <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+                    </ul>
+                    <button id="showCartButton" class="btn btn-light ms-auto">Ver Carrito</button>
+                </div>
+            </div>
+        </nav>
+        
+    </header>
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./img/carrito/banner 1.webp" class="d-block w-100" alt="Producto 1">
+            </div>
+            <div class="carousel-item">
+                <img src="./img/carrito/banner-2.webp" class="d-block w-100" alt="Producto 2">
+            </div>
+            <div class="carousel-item">
+                <img src="./img/carrito/banner-3.webp" class="d-block w-100" alt="Producto 3">
+            </div>
+            <div class="carousel-item">
+                <img src="./img/carrito/banner-4.webp" class="d-block w-100" alt="Producto 4">
+            </div>
+            <div class="carousel-item">
+                <img src="./img/carrito/banner-5.webp" class="d-block w-100" alt="Producto 5">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+    </div>
+
+    <!-- Sección Nosotros -->
+    <section id="nosotros" class="my-5 position-relative">
+        <div class="row">
+            <div class="col-12 position-relative">
+                <img src="./img/nosotros-3.jpg" alt="Historia del Negocio" class="img-fluid w-100 shadow">
+            </div>
+        </div>
+        <div class="container mt-4">
+            <h2>Acerca de Nosotros</h2>
+            <p>
+                Nuestra historia comienza en los años 70, cuando abrimos nuestras puertas como una pequeña librería en el corazón de la ciudad. En aquel entonces, nuestro objetivo era brindar a la comunidad un espacio donde pudieran encontrar libros, artículos de papelería y material escolar de calidad. A medida que pasaron los años, nos dimos cuenta de que nuestros clientes no solo buscaban productos para estudiar o trabajar, sino también opciones para celebrar momentos especiales y compartir alegría con sus seres queridos.
+            </p>
+            <p>
+                Inspirados por esta necesidad, comenzamos a incorporar artículos de fiesta y decoración. Al principio, eran detalles modestos, como tarjetas de felicitación y globos, pero pronto descubrimos que había un gran interés por este tipo de productos. Fue entonces cuando dimos el primer paso hacia nuestra transformación.
+            </p>
+            <p>
+                Durante las décadas siguientes, ampliamos nuestro catálogo y diversificamos nuestra oferta. Incorporamos disfraces, accesorios luminosos, vajillas temáticas y una amplia gama de artículos para eventos como cumpleaños, casamientos, bautismos, comuniones y fiestas empresariales. Lo que comenzó como un rincón dedicado al cotillón dentro de nuestra librería, se convirtió en el núcleo de nuestra empresa.
+            </p>
+            <p>
+                Hoy, somos líderes en el mercado de cotillón, reconocidos por nuestra innovación, calidad y atención al cliente. Nuestro compromiso es ayudar a nuestros clientes a crear momentos inolvidables, ofreciendo productos que inspiran creatividad y diversión. Desde los clásicos antifaces y serpentinas hasta los últimos accesorios luminosos, nuestra misión es ser la primera elección para quienes buscan celebrar la vida con estilo.
+            </p>
+            <p>
+                Lo que empezó como un sueño en los años 70 sigue creciendo, gracias a la confianza de nuestros clientes y nuestra pasión por la celebración. Así, hemos pasado de ser una pequeña librería a ser el referente principal de cotillón en la región.
+            </p>
+        </div>
+    </section>
+    
+
+    <!-- Productos Destacados -->
+    <section id="productos" class="container my-5">
+        <h2 class="text-center mb-4">Productos Destacados</h2>
+        <div class="row" id="productCards"></div>
+    </section>
+
+    <!-- formulario -->
+    <section id="contacto" class="container my-5">
+        <h2 class="text-center mb-4">Contacto</h2>
+        <form class="row g-3">
+            <div class="col-md-6">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" id="nombre" class="form-control" placeholder="Ingrese su nombre" required>
+            </div>
+            <div class="col-md-6">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" id="apellido" class="form-control" placeholder="Ingrese su apellido" required>
+            </div>
+            <div class="col-md-6">
+                <label for="direccion" class="form-label">Dirección</label>
+                <input type="text" id="direccion" class="form-control" placeholder="Ingrese su dirección">
+            </div>
+            <div class="col-md-6">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="tel" id="telefono" class="form-control" placeholder="Ingrese su teléfono">
+            </div>
+            <div class="col-md-12">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" class="form-control" placeholder="Ingrese su correo electrónico" required>
+            </div>
+            <div class="col-md-12">
+                <label for="tipoFestejo" class="form-label">Tipo de Festejo</label>
+                <select id="tipoFestejo" class="form-select">
+                    <option value="" disabled selected>Seleccione...</option>
+                    <option>Cumpleaños</option>
+                    <option>Casamiento</option>
+                    <option>Bautismo</option>
+                    <option>Comunión</option>
+                    <option>Cumpleaños de 15</option>
+                    <option>Fiesta de Trabajo</option>
+                    <option>Compra por Mayor</option>
+                </select>
+            </div>
+            <div class="col-12 text-center">
+                <button type="submit" class="btn btn-success mt-3">Enviar</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Carrito -->
+    <aside id="carrito" class="position-fixed bg-light border p-3 shadow" style="right: -400px; transition: right 0.3s;">
+        <h3>Carrito de Compras</h3>
+        <ul id="cartItems" class="list-group"></ul>
+        <h4>Total: $<span id="totalPrice">0</span></h4>
+        <button id="finalizePurchaseButton" class="btn btn-success w-100 mt-3">Finalizar Compra</button>
+    </aside>
+
+    <footer class="bg-danger text-white text-center py-3">
+        <p>&copy; 2024 Cotillón Alegre. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
